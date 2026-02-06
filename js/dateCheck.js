@@ -22,14 +22,14 @@ buttons.forEach((btn) => {
 
 function getDayName(day) {
   const names = {
-    1: "rose",
-    2: "propose",
-    3: "chocolate",
-    4: "teddy",
-    5: "promise",
-    6: "hug",
-    7: "kiss",
-    8: "valentine",
+    7: "rose",
+    8: "propose",
+    9: "chocolate",
+    10: "teddy",
+    11: "promise",
+    12: "hug",
+    13: "kiss",
+    14: "valentine",
   };
   return names[day];
 }
