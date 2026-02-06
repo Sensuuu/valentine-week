@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap');
+
+:root {
+    --pink-main: #ff7eb9;
+    --pink-soft: #ffd6e8;
+    --pink-dark: #ff4d94;
+    --white: #ffffff;
+    --text-dark: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--pink-soft), var(--pink-main));
+    min-height: 100vh;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.days-grid button {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.4rem;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+/* Slightly larger screens (tablets) */
+@media (min-width: 600px) {
+    .days-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: var(--pink-dark);
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+button {
+    background: var(--pink-dark);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: var(--pink-main);
+}
+
+.locked {
+    opacity: 0.5;
+    pointer-events: none;
+}

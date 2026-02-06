@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chocolate Day 🍫</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Happy Chocolate Day 🍫</h1>
+      <p class="subtitle">
+        Pick a chocolate… each one is a little piece of my heart 💖
+      </p>
+
+      <!-- Chocolates (hidden initially) -->
+      <div id="chocoCards" class="choco-cards vertical hidden">
+        <div class="choco-card" onclick="flipChoco(this, 0)">
+          <div class="card-inner">
+            <!-- FRONT -->
+            <div class="card-front image-card">
+              <img src="../assets/images/choco/choco-1.jpeg" />
+              <div class="tap-overlay">Tap to open 🍫</div>
+            </div>
+
+            <!-- BACK -->
+            <div class="card-back">
+              <div class="note">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="choco-card" onclick="flipChoco(this, 1)">
+          <div class="card-inner">
+            <div class="card-front image-card">
+              <img src="../assets/images/choco/choco-2.jpeg" />
+              <div class="tap-overlay">Tap to open 🍬</div>
+            </div>
+
+            <div class="card-back">
+              <div class="note"><p></p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="choco-card" onclick="flipChoco(this, 2)">
+          <div class="card-inner">
+            <div class="card-front image-card">
+              <img src="../assets/images/choco/choco-3.jpeg" />
+              <div class="tap-overlay">Tap to open 🍩</div>
+            </div>
+
+            <div class="card-back">
+              <div class="note"><p></p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="choco-card special" onclick="flipChoco(this, 3)">
+          <div class="card-inner">
+            <div class="card-front image-card">
+              <img src="../assets/images/choco/choco-special.jpeg" />
+              <div class="tap-overlay">Tap to open 🎁</div>
+            </div>
+
+            <div class="card-back">
+              <div class="note"><p></p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="chocoMessage" class="choco-message"></div>
+
+      <p class="footer-text">
+        Come back tomorrow for another surprise my babyyy💌
+      </p>
+    </div>
+
+    <script src="../js/interactions.js"></script>
+  </body>
+</html>
