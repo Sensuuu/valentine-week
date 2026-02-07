@@ -1,0 +1,35 @@
+/* Propose Day */
+
+.proposal-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.question {
+    font-family: 'Pacifico', cursive;
+    color: var(--pink-dark);
+    margin: 1.2rem 0 1.6rem;
+}
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+#yesBtn {
+    transition: transform 0.3s ease;
+}
+
+#noBtn {
+    position: relative;
+    transition: 0.3s;
+}
+
+.result-text {
+    font-size: 0.95rem;
+    color: var(--pink-dark);
+    margin-top: 1rem;
+    min-height: 30px;
+}

@@ -1,0 +1,114 @@
+/* 🧸 Teddy Day */
+
+.teddy-shelf {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.teddy-card {
+    perspective: 1000px;
+}
+
+.teddy-inner {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.teddy-card.flipped .teddy-inner {
+    transform: rotateY(180deg);
+}
+
+.teddy-front,
+.teddy-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teddy-front {
+    background: linear-gradient(135deg, #ffd6e8, #ffb6d5);
+    overflow: hidden;
+    /* 🔥 important */
+}
+
+.teddy-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 🔥 fixes image overflow */
+    border-radius: 22px;
+}
+
+.teddy-tap {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 77, 148, 0.9);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 18px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    box-shadow: 0 6px 14px rgba(255, 77, 148, 0.35);
+}
+
+
+
+.teddy-front span {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.teddy-back {
+    background: #fff0f6;
+    transform: rotateY(180deg);
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.teddy-back p {
+    font-size: 1rem;
+    color: #ff4d94;
+    line-height: 1.4;
+}
+
+.teddy-card {
+    cursor: pointer;
+}
+
+.teddy-card:active {
+    transform: scale(0.97);
+}
+
+.teddy-card.hide {
+    animation: fadeOut 0.6s forwards;
+}
+
+/* Final Reveal */
+.teddy-final {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

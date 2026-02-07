@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise Day 💍</title>
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/floating.css" />
+    <link rel="stylesheet" href="../css/promise.css" />
+  </head>
+
+  <body>
+    <div class="container promise-container">
+      <h1>Happy Promise Day Diyu💍</h1>
+      <p class="subtitle">
+        These aren’t just words… these are promises I truly mean 🤍
+      </p>
+
+      <button id="startPromises" class="primary-btn">
+        💌 Make a promise with me
+      </button>
+
+      <div id="promiseBox" class="promise-box hidden">
+        <!-- Promises will appear here -->
+      </div>
+
+      <p class="footer-text">Come back tomorrow for another surprise 💌</p>
+    </div>
+
+    <!-- Floating hearts layer -->
+    <div id="floating-layer"></div>
+
+    <script>
+      // Disable auto floating hearts for Promise Day
+      window.disableAutoFloatingHearts = true;
+    </script>
+    <script src="../js/interactions.js"></script>
+    <script src="../js/floating.js"></script>
+
+    <!-- Promise Day logic -->
+    <script src="../js/promise.js"></script>
+  </body>
+</html>

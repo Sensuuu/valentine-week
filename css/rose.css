@@ -1,0 +1,108 @@
+/* Rose page section */
+
+/* Vertical card stack */
+.rose-cards.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin: 2rem 0;
+}
+
+/* Card container */
+.rose-card {
+    perspective: 1200px;
+}
+
+.rose-card.hide {
+    animation: fadeOut 0.6s forwards;
+}
+
+
+/* Inner flip */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+
+}
+
+.rose-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Shared faces */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FRONT WITH IMAGE */
+.image-card {
+    background: linear-gradient(135deg, #ff9acb, #ff5fa2);
+    display: flex;
+    flex-direction: column;
+}
+
+.image-card img {
+    flex: 1;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.tap-overlay {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 77, 148, 0.85);
+    color: white;
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+
+/* BACK SIDE */
+.card-back {
+    background: linear-gradient(135deg, #fff0f6, #ffe3ef);
+    color: var(--pink-dark);
+    transform: rotateY(180deg);
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note {
+    background: white;
+    border-radius: 18px;
+    padding: 1.2rem;
+    box-shadow: 0 10px 25px rgba(255, 77, 148, 0.2);
+    text-align: center;
+}
+
+.note p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/* Footer text */
+.footer-text {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin-top: 1.8rem;
+}
